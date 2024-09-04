@@ -164,31 +164,6 @@ variable "repository_archive_on_destroy" {
   default     = true
 }
 
-variable "repository_pages" {
-  type = object({
-    branch = optional(string, null)
-    path   = optional(string, null)
-  })
-  description = "(Optional) The repository's GitHub Pages configuration. See GitHub Pages Configuration below for details."
-  default     = null
-}
-
-variable "repository_security_and_analysis" {
-  type = object({
-    advanced_security = object({
-      status = optional(string, null)
-    })
-    secret_scanning = object({
-      status = optional(string, null)
-    })
-    secret_scanning_push_protection = object({
-      status = optional(string, null)
-    })
-  })
-  default = null
-  description = "(Optional) The repository's security and analysis configuration."
-}
-
 
 variable "repository_topics" {
   type        = list(string)
