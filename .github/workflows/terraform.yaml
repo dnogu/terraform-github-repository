@@ -12,4 +12,5 @@ jobs:
   docs:
     uses: dnogu/ActionCI/.github/workflows/tf-docs.yaml@main
     secrets: inherit
+    needs: tflint
 
