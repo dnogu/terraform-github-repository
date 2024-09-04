@@ -1,6 +1,7 @@
 # AUTHENTICATION VARIABLE
 variable "github_token" {
   type = string
+  description = "Github token used for authentication to create and destory repositories."
 }
 # AUTHENTICATION VARIABLES
 variable "repository_name" {
