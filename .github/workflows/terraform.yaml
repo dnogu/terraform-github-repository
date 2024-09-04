@@ -6,6 +6,10 @@ on:
       - main
 
 jobs:
-  release:
+  tflint:
     uses: dnogu/ActionCI/.github/workflows/tflint.yaml@main
     secrets: inherit
+  docs:
+    uses: dnogu/ActionCI/.github/workflows/tf-docs.yaml@main
+    secrets: inherit
+
