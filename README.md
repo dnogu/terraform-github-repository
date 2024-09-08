@@ -19,7 +19,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| github\_token | Github token used for authentication to create and destory repositories. | `string` | n/a | yes |
 | repository\_allow\_auto\_merge | (Optional) Set to true to allow auto-merging pull requests on the repository. | `bool` | `null` | no |
 | repository\_allow\_merge\_commit | (Optional) Set to false to disable merge commits on the repository. | `bool` | `null` | no |
 | repository\_allow\_rebase\_merge | (Optional) Set to false to disable rebase merges on the repository. | `bool` | `null` | no |
