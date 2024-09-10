@@ -1,2 +1,12 @@
 repository_name = "example-repo"
 # repository_visibility = "public"
+issue_labels_labels = [
+    {
+        name = "test"
+        color = "123456"
+        description = "testdescription"
+    },
+    {
+        name = "test2"
+    }
+]

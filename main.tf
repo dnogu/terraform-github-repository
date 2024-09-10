@@ -41,3 +41,11 @@ resource "github_repository" "repo" {
     }
   }
 }
+
+resource "github_issue_label" "repo_label" {
+  for_each = {for label in var.issue_labels_labels: label.name => label}
+  repository = github_repository.repo.name
+  name        = each.key
+  color       = each.value.color
+  description = each.value.description
+}
