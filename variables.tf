@@ -208,3 +208,9 @@ variable "issue_label_labels" {
   description = "(Optional) Set of labels to be created and associated with repo"
   default     = []
 }
+
+variable "github_repository_collaborators_collaborators" {
+  type = map(string)
+  description = "Map of Users as key and permission as value"
+  default = {}
+}

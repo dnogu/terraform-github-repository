@@ -10,3 +10,7 @@ issue_label_labels = [
         name = "test2"
     }
 ]
+github_repository_collaborators_collaborators = {
+    "pepper" = "push"
+    "albus" = "admin"
+}

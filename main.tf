@@ -42,10 +42,28 @@ resource "github_repository" "repo" {
   }
 }
 
-resource "github_issue_label" "repo_label" {
-  for_each = {for label in var.issue_label_labels: label.name => label}
+resource "github_issue_labels" "repo_label" {
   repository = github_repository.repo.name
-  name        = each.key
-  color       = each.value.color
-  description = each.value.description
+  dynamic "label" {
+    for_each = {for label in var.issue_label_labels: label.name => label}
+    content {
+      name        = label.key
+      color       = label.value.color
+      description = label.value.description
+    }
+  }
+}
+
+
+resource "github_repository_collaborators" "some_repo_collaborators" {
+  repository = github_repository.repo.name
+
+  dynamic "user" {
+    for_each = var.github_repository_collaborators_collaborators
+
+    content {
+      permission = user.value
+      username  = user.key
+    }
+  }
 }

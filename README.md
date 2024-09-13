@@ -13,13 +13,15 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [github_issue_label.repo_label](https://registry.terraform.io/providers/integrations/github/6.2.3/docs/resources/issue_label) | resource |
+| [github_issue_labels.repo_label](https://registry.terraform.io/providers/integrations/github/6.2.3/docs/resources/issue_labels) | resource |
 | [github_repository.repo](https://registry.terraform.io/providers/integrations/github/6.2.3/docs/resources/repository) | resource |
+| [github_repository_collaborators.some_repo_collaborators](https://registry.terraform.io/providers/integrations/github/6.2.3/docs/resources/repository_collaborators) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| github\_repository\_collaborators\_collaborators | Map of Users as key and permission as value | `map(string)` | `{}` | no |
 | issue\_label\_labels | (Optional) Set of labels to be created and associated with repo | <pre>list(object({<br>    name        = string<br>    color       = optional(string, "ffffff")<br>    description = optional(string, "")<br>  }))</pre> | `[]` | no |
 | repository\_allow\_auto\_merge | (Optional) Set to true to allow auto-merging pull requests on the repository. | `bool` | `null` | no |
 | repository\_allow\_merge\_commit | (Optional) Set to false to disable merge commits on the repository. | `bool` | `null` | no |
