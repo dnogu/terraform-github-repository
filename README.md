@@ -62,7 +62,6 @@ No modules.
 | <a name="input_repository_visibility"></a> [repository\_visibility](#input\_repository\_visibility) | (Optional) Can be public or private. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be internal. The visibility parameter overrides the private parameter. | `string` | `"private"` | no |
 | <a name="input_repository_vulnerability_alerts"></a> [repository\_vulnerability\_alerts](#input\_repository\_vulnerability\_alerts) | (Optional) Set to true to enable security alerts for vulnerable dependencies. Enabling requires alerts to be enabled on the owner level. (Note for importing: GitHub enables the alerts on public repos but disables them on private repos by default.) See GitHub Documentation for details. Note that vulnerability alerts have not been successfully tested on any GitHub Enterprise instance and may be unavailable in those settings. | `bool` | `null` | no |
 | <a name="input_repository_web_commit_signoff_required"></a> [repository\_web\_commit\_signoff\_required](#input\_repository\_web\_commit\_signoff\_required) | (Optional) Require contributors to sign off on web-based commits. See more here. Defaults to false. | `bool` | `false` | no |
-| <a name="input_terraform_repo"></a> [terraform\_repo](#input\_terraform\_repo) | Whether repo will be used with terraform | `bool` | `false` | no |
 
 ## Outputs
 

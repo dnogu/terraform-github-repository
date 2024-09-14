@@ -1,10 +1,3 @@
-# AUTHENTICATION VARIABLE
-variable "terraform_repo" {
-  type        = bool
-  description = "Whether repo will be used with terraform"
-  default     = false
-}
-
 # AUTHENTICATION VARIABLES
 variable "repository_name" {
   type        = string
