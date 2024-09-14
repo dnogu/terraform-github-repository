@@ -142,12 +142,6 @@ variable "repository_license_template" {
   default     = null
 }
 
-variable "repository_default_branch" {
-  type        = bool
-  description = "(Optional) (Deprecated: Use github_branch_default resource instead) The name of the default branch of the repository. NOTE: This can only be set after a repository has already been created, and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the initial repository creation and create the target branch inside of the repository prior to setting this attribute."
-  default     = null
-}
-
 variable "repository_archived" {
   type        = bool
   description = "(Optional) Specifies if the repository should be archived. Defaults to false. NOTE Currently, the API does not support unarchiving."

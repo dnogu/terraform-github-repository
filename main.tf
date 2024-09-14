@@ -30,8 +30,6 @@ resource "github_repository" "repo" {
   ignore_vulnerability_alerts_during_read = var.repository_ignore_vulnerability_alerts_during_read
   allow_update_branch                     = var.repository_allow_update_branch
 
-  default_branch = var.repository_default_branch
-
   dynamic "template" {
     for_each = var.repository_template != null ? var.repository_template : {}
     content {
