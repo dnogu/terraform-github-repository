@@ -45,7 +45,7 @@ resource "github_repository" "repo" {
 resource "github_issue_labels" "repo_label" {
   repository = github_repository.repo.name
   dynamic "label" {
-    for_each = {for label in var.issue_label_labels: label.name => label}
+    for_each = { for label in var.issue_label_labels : label.name => label }
     content {
       name        = label.key
       color       = label.value.color
@@ -63,7 +63,7 @@ resource "github_repository_collaborators" "repo_collaborators" {
 
     content {
       permission = user.value
-      username  = user.key
+      username   = user.key
     }
   }
 }

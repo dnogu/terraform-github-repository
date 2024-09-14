@@ -1,8 +1,8 @@
 # AUTHENTICATION VARIABLE
 variable "terraform_repo" {
-  type = bool
+  type        = bool
   description = "Whether repo will be used with terraform"
-  default = false
+  default     = false
 }
 
 # AUTHENTICATION VARIABLES
@@ -212,47 +212,7 @@ variable "issue_label_labels" {
 }
 
 variable "github_repository_collaborators_collaborators" {
-  type = map(string)
+  type        = map(string)
   description = "Map of Users as key and permission as value"
-  default = {}
-}
-
-variable "github_repository_file_repository" {
-    type = string
-    description = "(Required) The repository to create the file in."
-}
-variable "github_repository_file_file" {
-    type = string
-    description = "(Required) The path of the file to manage."
-    default = null
-}
-variable "github_repository_file_content" {
-    type = string
-    description = "(Required) The file content."
-    default = null
-}
-variable "github_repository_file_branch" {
-    type = string
-    description = "(Optional) Git branch (defaults to the repository's default branch). The branch must already exist, it will not be created if it does not already exist"
-    default = null
-}
-variable "github_repository_file_commit_author" {
-    type = string
-    description = "(Optional) Committer author name to use. NOTE: GitHub app users may omit author and email information so GitHub can verify commits as the GitHub App. This maybe useful when a branch protection rule requires signed commits"
-    default = null
-}
-variable "github_repository_file_commit_email" {
-    type = string
-    description = "(Optional) Committer email address to use. NOTE: GitHub app users may omit author and email information so GitHub can verify commits as the GitHub App. This may be useful when a branch protection rule requires signed commits"
-    default = null
-}
-variable "github_repository_file_commit_message" {
-    type = string
-    description = "(Optional) The commit message when creating, updating or deleting the managed file"
-    default = "Managed by Terraform"
-}
-variable "github_repository_file_overwrite_on_create" {
-    type = bool
-    description = "(Optional) Enable overwriting existing files. If set to true it will overwrite an existing file with the same name. If set to false it will fail if there is an existing file with the same name"
-    default = false
+  default     = {}
 }

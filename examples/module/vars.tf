@@ -12,6 +12,6 @@ variable "issue_label_labels" {
 }
 
 variable "github_repository_collaborators_collaborators" {
-  type = map(string)
+  type    = map(string)
   default = {}
 }
