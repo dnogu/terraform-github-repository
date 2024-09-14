@@ -24,6 +24,7 @@ No modules.
 | [github_repository.repo](https://registry.terraform.io/providers/integrations/github/6.2.3/docs/resources/repository) | resource |
 | [github_repository_collaborators.repo_collaborators](https://registry.terraform.io/providers/integrations/github/6.2.3/docs/resources/repository_collaborators) | resource |
 
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
