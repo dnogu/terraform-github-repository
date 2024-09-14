@@ -67,21 +67,3 @@ resource "github_repository_collaborators" "repo_collaborators" {
     }
   }
 }
-
-resource "github_repository_file" "backend_config" {
-  count = var.terraform_repo == true ? 0 : 1
-  repository          = github_repository.repo.name
-  branch              = var.github_repository_file_branch
-  file                = "terraform/backend.tf"
-  content             = <<EOT
-    terraform {
-      backend "s3" {
-        bucket = "${github_repository.repo.name}-state"
-        key    = "state/terraform.tfstate"
-        region = "us-east-1"
-      }
-    }
-    EOT
-  commit_message      = "Managed By Terraform"
-  overwrite_on_create = false
-}
