@@ -1,8 +1,10 @@
 # AUTHENTICATION VARIABLE
-#variable "github_token" {
-#  type = string
-#  description = "Github token used for authentication to create and destory repositories."
-#}
+variable "terraform_repo" {
+  type = bool
+  description = "Whether repo will be used with terraform"
+  default = false
+}
+
 # AUTHENTICATION VARIABLES
 variable "repository_name" {
   type        = string
@@ -247,10 +249,10 @@ variable "github_repository_file_commit_email" {
 variable "github_repository_file_commit_message" {
     type = string
     description = "(Optional) The commit message when creating, updating or deleting the managed file"
-    default = null
+    default = "Managed by Terraform"
 }
 variable "github_repository_file_overwrite_on_create" {
-    type = string
+    type = bool
     description = "(Optional) Enable overwriting existing files. If set to true it will overwrite an existing file with the same name. If set to false it will fail if there is an existing file with the same name"
-    default = null
+    default = false
 }
