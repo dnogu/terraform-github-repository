@@ -70,6 +70,7 @@ No modules.
 | <a name="output_github_repository_git_clone_url"></a> [github\_repository\_git\_clone\_url](#output\_github\_repository\_git\_clone\_url) | URL that can be provided to git clone to clone the repository anonymously via the git protocol. |
 | <a name="output_github_repository_html_url"></a> [github\_repository\_html\_url](#output\_github\_repository\_html\_url) | The absolute URL (including scheme) of the rendered GitHub Pages site e.g. https://username.github.io. |
 | <a name="output_github_repository_http_clone_url"></a> [github\_repository\_http\_clone\_url](#output\_github\_repository\_http\_clone\_url) | URL that can be provided to git clone to clone the repository via HTTPS. |
+| <a name="output_github_repository_name"></a> [github\_repository\_name](#output\_github\_repository\_name) | Name of the repo. |
 | <a name="output_github_repository_node_id"></a> [github\_repository\_node\_id](#output\_github\_repository\_node\_id) | GraphQL global node id for use with v4 API |
 | <a name="output_github_repository_primary_language"></a> [github\_repository\_primary\_language](#output\_github\_repository\_primary\_language) | The primary language used in the repository. |
 | <a name="output_github_repository_repo_id"></a> [github\_repository\_repo\_id](#output\_github\_repository\_repo\_id) | GitHub ID for the repository |

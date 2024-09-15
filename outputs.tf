@@ -1,3 +1,7 @@
+output "github_repository_name" {
+  value       = github_repository.repo.name
+  description = "Name of the repo."
+}
 output "github_repository_full_name" {
   value       = github_repository.repo.full_name
   description = "A string of the form \"orgname/reponame\"."
