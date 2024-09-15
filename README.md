@@ -59,7 +59,6 @@ No modules.
 | Name | Description |
 |------|-------------|
 | github\_repository\_collaborators\_user | The user block exports username and role. |
-| github\_repository\_custom\_404 | Whether the rendered GitHub Pages site has a custom 404 page. |
 | github\_repository\_full\_name | A string of the form "orgname/reponame". |
 | github\_repository\_git\_clone\_url | URL that can be provided to git clone to clone the repository anonymously via the git protocol. |
 | github\_repository\_html\_url | URL to the repository on the web. |
@@ -69,6 +68,5 @@ No modules.
 | github\_repository\_primary\_language | The primary language used in the repository. |
 | github\_repository\_repo\_id | GitHub ID for the repository |
 | github\_repository\_ssh\_clone\_url | URL that can be provided to git clone to clone the repository via SSH. |
-| github\_repository\_status | The GitHub Pages site's build status e.g. building or built. |
 | github\_repository\_svn\_url | URL that can be provided to svn checkout to check out the repository via GitHub's Subversion protocol emulation. |
 <!-- END_TF_DOCS -->
