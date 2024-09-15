@@ -42,11 +42,12 @@ output "github_repository_custom_404" {
   value       = github_repository.repo.custom_404
   description = "Whether the rendered GitHub Pages site has a custom 404 page."
 }
-output "github_repository_html_url" {
-  value       = github_repository.repo.html_url
-  description = "The absolute URL (including scheme) of the rendered GitHub Pages site e.g. https://username.github.io."
-}
 output "github_repository_status" {
   value       = github_repository.repo.status
   description = "The GitHub Pages site's build status e.g. building or built."
+}
+
+output "github_repository_collaborators_user" {
+  value       = github_repository_collaborators.user
+  description = "The user block exports username and role."
 }
