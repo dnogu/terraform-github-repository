@@ -1,6 +1,5 @@
 ## Proposed changes
 
-
 ## Types of changes
 - [ ] Documentation change
 - [ ] Bug fix (non-breaking change which fixes an issue)
