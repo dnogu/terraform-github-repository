@@ -1,39 +1,48 @@
-output "repo_full_name" {
-  value = "github_repository.full_name"
+output "github_repository_full_name" {
+  value       = github_repository.repo.full_name
+  description = "A string of the form \"orgname/reponame\"."
 }
-output "repo_html_url" {
-  value = "github_repository.html_url"
+output "github_repository_html_url" {
+  value       = github_repository.repo.html_url
+  description = "URL to the repository on the web."
 }
-output "repo_ssh_clone_url" {
-  value = "github_repository.ssh_clone_url"
+output "github_repository_ssh_clone_url" {
+  value       = github_repository.repo.ssh_clone_url
+  description = "URL that can be provided to git clone to clone the repository via SSH."
 }
-output "repo_http_clone_url" {
-  value = "github_repository.http_clone_url"
+output "github_repository_http_clone_url" {
+  value       = github_repository.repo.http_clone_url
+  description = "URL that can be provided to git clone to clone the repository via HTTPS."
 }
-output "repo_git_clone_url" {
-  value = "github_repository.git_clone_url"
+output "github_repository_git_clone_url" {
+  value       = github_repository.repo.git_clone_url
+  description = "URL that can be provided to git clone to clone the repository anonymously via the git protocol."
 }
-output "repo_svn_url" {
-  value = "github_repository.svn_url"
+output "github_repository_svn_url" {
+  value       = github_repository.repo.svn_url
+  description = "URL that can be provided to svn checkout to check out the repository via GitHub's Subversion protocol emulation."
 }
-output "repo_node_id" {
-  value = "github_repository.node_id"
+output "github_repository_node_id" {
+  value       = github_repository.repo.node_id
+  description = "GraphQL global node id for use with v4 API"
 }
-output "repo_repo_id" {
-  value = "github_repository.repo_id"
+output "github_repository_repo_id" {
+  value       = github_repository.repo.repo_id
+  description = "GitHub ID for the repository"
 }
-output "repo_primary_language" {
-  value = "github_repository.primary_language"
+output "github_repository_primary_language" {
+  value       = github_repository.repo.primary_language
+  description = "The primary language used in the repository."
 }
-output "repo_pages" {
-  value = "github_repository.pages"
+output "github_repository_custom_404" {
+  value       = github_repository.repo.custom_404
+  description = "Whether the rendered GitHub Pages site has a custom 404 page."
 }
-output "repo_custom_404" {
-  value = "github_repository.custom_404"
+output "github_repository_html_url" {
+  value       = github_repository.repo.html_url
+  description = "The absolute URL (including scheme) of the rendered GitHub Pages site e.g. https://username.github.io."
 }
-output "repo_html_url" {
-  value = "github_repository.html_url"
-}
-output "repo_status" {
-  value = "github_repository.status"
+output "github_repository_status" {
+  value       = github_repository.repo.status
+  description = "The GitHub Pages site's build status e.g. building or built."
 }
