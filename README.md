@@ -58,15 +58,16 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| github\_repository\_custom\_404 | Whether the rendered GitHub Pages site has a custom 404 page. |
-| github\_repository\_full\_name | A string of the form "orgname/reponame". |
-| github\_repository\_git\_clone\_url | URL that can be provided to git clone to clone the repository anonymously via the git protocol. |
-| github\_repository\_html\_url | The absolute URL (including scheme) of the rendered GitHub Pages site e.g. https://username.github.io. |
-| github\_repository\_http\_clone\_url | URL that can be provided to git clone to clone the repository via HTTPS. |
-| github\_repository\_node\_id | GraphQL global node id for use with v4 API |
-| github\_repository\_primary\_language | The primary language used in the repository. |
-| github\_repository\_repo\_id | GitHub ID for the repository |
-| github\_repository\_ssh\_clone\_url | URL that can be provided to git clone to clone the repository via SSH. |
-| github\_repository\_status | The GitHub Pages site's build status e.g. building or built. |
-| github\_repository\_svn\_url | URL that can be provided to svn checkout to check out the repository via GitHub's Subversion protocol emulation. |
+| <a name="output_github_repository_custom_404"></a> [github\_repository\_custom\_404](#output\_github\_repository\_custom\_404) | Whether the rendered GitHub Pages site has a custom 404 page. |
+| <a name="output_github_repository_full_name"></a> [github\_repository\_full\_name](#output\_github\_repository\_full\_name) | A string of the form "orgname/reponame". |
+| <a name="output_github_repository_git_clone_url"></a> [github\_repository\_git\_clone\_url](#output\_github\_repository\_git\_clone\_url) | URL that can be provided to git clone to clone the repository anonymously via the git protocol. |
+| <a name="output_github_repository_html_url"></a> [github\_repository\_html\_url](#output\_github\_repository\_html\_url) | The absolute URL (including scheme) of the rendered GitHub Pages site e.g. https://username.github.io. |
+| <a name="output_github_repository_http_clone_url"></a> [github\_repository\_http\_clone\_url](#output\_github\_repository\_http\_clone\_url) | URL that can be provided to git clone to clone the repository via HTTPS. |
+| <a name="output_github_repository_name"></a> [github\_repository\_name](#output\_github\_repository\_name) | Name of the repo. |
+| <a name="output_github_repository_node_id"></a> [github\_repository\_node\_id](#output\_github\_repository\_node\_id) | GraphQL global node id for use with v4 API |
+| <a name="output_github_repository_primary_language"></a> [github\_repository\_primary\_language](#output\_github\_repository\_primary\_language) | The primary language used in the repository. |
+| <a name="output_github_repository_repo_id"></a> [github\_repository\_repo\_id](#output\_github\_repository\_repo\_id) | GitHub ID for the repository |
+| <a name="output_github_repository_ssh_clone_url"></a> [github\_repository\_ssh\_clone\_url](#output\_github\_repository\_ssh\_clone\_url) | URL that can be provided to git clone to clone the repository via SSH. |
+| <a name="output_github_repository_status"></a> [github\_repository\_status](#output\_github\_repository\_status) | The GitHub Pages site's build status e.g. building or built. |
+| <a name="output_github_repository_svn_url"></a> [github\_repository\_svn\_url](#output\_github\_repository\_svn\_url) | URL that can be provided to svn checkout to check out the repository via GitHub's Subversion protocol emulation. |
 <!-- END_TF_DOCS -->
