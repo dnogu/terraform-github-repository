@@ -30,8 +30,6 @@ resource "github_repository" "repo" {
   ignore_vulnerability_alerts_during_read = var.repository_ignore_vulnerability_alerts_during_read
   allow_update_branch                     = var.repository_allow_update_branch
 
-  default_branch = var.repository_default_branch
-
   dynamic "template" {
     for_each = var.repository_template != null ? var.repository_template : {}
     content {
@@ -45,7 +43,7 @@ resource "github_repository" "repo" {
 resource "github_issue_labels" "repo_label" {
   repository = github_repository.repo.name
   dynamic "label" {
-    for_each = {for label in var.issue_label_labels: label.name => label}
+    for_each = { for label in var.issue_label_labels : label.name => label }
     content {
       name        = label.key
       color       = label.value.color
@@ -55,7 +53,7 @@ resource "github_issue_labels" "repo_label" {
 }
 
 
-resource "github_repository_collaborators" "some_repo_collaborators" {
+resource "github_repository_collaborators" "repo_collaborators" {
   repository = github_repository.repo.name
 
   dynamic "user" {
@@ -63,7 +61,7 @@ resource "github_repository_collaborators" "some_repo_collaborators" {
 
     content {
       permission = user.value
-      username  = user.key
+      username   = user.key
     }
   }
 }

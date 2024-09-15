@@ -15,7 +15,7 @@ No modules.
 |------|------|
 | [github_issue_labels.repo_label](https://registry.terraform.io/providers/integrations/github/6.2.3/docs/resources/issue_labels) | resource |
 | [github_repository.repo](https://registry.terraform.io/providers/integrations/github/6.2.3/docs/resources/repository) | resource |
-| [github_repository_collaborators.some_repo_collaborators](https://registry.terraform.io/providers/integrations/github/6.2.3/docs/resources/repository_collaborators) | resource |
+| [github_repository_collaborators.repo_collaborators](https://registry.terraform.io/providers/integrations/github/6.2.3/docs/resources/repository_collaborators) | resource |
 
 ## Inputs
 
@@ -31,7 +31,6 @@ No modules.
 | repository\_archive\_on\_destroy | (Optional) Set to true to archive the repository instead of deleting on destroy. | `bool` | `true` | no |
 | repository\_archived | (Optional) Specifies if the repository should be archived. Defaults to false. NOTE Currently, the API does not support unarchiving. | `bool` | `null` | no |
 | repository\_auto\_init | (Optional) Set to true to produce an initial commit in the repository. | `bool` | `null` | no |
-| repository\_default\_branch | (Optional) (Deprecated: Use github\_branch\_default resource instead) The name of the default branch of the repository. NOTE: This can only be set after a repository has already been created, and after a correct reference has been created for the target branch inside the repository. This means a user will have to omit this parameter from the initial repository creation and create the target branch inside of the repository prior to setting this attribute. | `bool` | `null` | no |
 | repository\_delete\_branch\_on\_merge | (Optional) Automatically delete head branch after a pull request is merged. Defaults to false. | `bool` | `null` | no |
 | repository\_description | (Optional) A description of the repository. | `string` | `null` | no |
 | repository\_gitignore\_template | (Optional) Use the name of the template without the extension. For example, 'Haskell'. | `bool` | `null` | no |
@@ -57,5 +56,17 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| github\_repository\_custom\_404 | Whether the rendered GitHub Pages site has a custom 404 page. |
+| github\_repository\_full\_name | A string of the form "orgname/reponame". |
+| github\_repository\_git\_clone\_url | URL that can be provided to git clone to clone the repository anonymously via the git protocol. |
+| github\_repository\_html\_url | The absolute URL (including scheme) of the rendered GitHub Pages site e.g. https://username.github.io. |
+| github\_repository\_http\_clone\_url | URL that can be provided to git clone to clone the repository via HTTPS. |
+| github\_repository\_node\_id | GraphQL global node id for use with v4 API |
+| github\_repository\_primary\_language | The primary language used in the repository. |
+| github\_repository\_repo\_id | GitHub ID for the repository |
+| github\_repository\_ssh\_clone\_url | URL that can be provided to git clone to clone the repository via SSH. |
+| github\_repository\_status | The GitHub Pages site's build status e.g. building or built. |
+| github\_repository\_svn\_url | URL that can be provided to svn checkout to check out the repository via GitHub's Subversion protocol emulation. |
 <!-- END_TF_DOCS -->
