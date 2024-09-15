@@ -75,6 +75,5 @@ No modules.
 | <a name="output_github_repository_primary_language"></a> [github\_repository\_primary\_language](#output\_github\_repository\_primary\_language) | The primary language used in the repository. |
 | <a name="output_github_repository_repo_id"></a> [github\_repository\_repo\_id](#output\_github\_repository\_repo\_id) | GitHub ID for the repository |
 | <a name="output_github_repository_ssh_clone_url"></a> [github\_repository\_ssh\_clone\_url](#output\_github\_repository\_ssh\_clone\_url) | URL that can be provided to git clone to clone the repository via SSH. |
-| <a name="output_github_repository_status"></a> [github\_repository\_status](#output\_github\_repository\_status) | The GitHub Pages site's build status e.g. building or built. |
 | <a name="output_github_repository_svn_url"></a> [github\_repository\_svn\_url](#output\_github\_repository\_svn\_url) | URL that can be provided to svn checkout to check out the repository via GitHub's Subversion protocol emulation. |
 <!-- END_TF_DOCS -->

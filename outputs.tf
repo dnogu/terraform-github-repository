@@ -38,10 +38,7 @@ output "github_repository_primary_language" {
   value       = github_repository.repo.primary_language
   description = "The primary language used in the repository."
 }
-output "github_repository_status" {
-  value       = github_repository.repo.status
-  description = "The GitHub Pages site's build status e.g. building or built."
-}
+
 
 output "github_repository_collaborators_user" {
   value       = github_repository_collaborators.repo_collaborators.user
