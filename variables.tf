@@ -1,4 +1,8 @@
 # AUTHENTICATION VARIABLES
+variable "github_token" {
+  type        = string
+  description = "Authentication token used for github."
+}
 variable "repository_name" {
   type        = string
   description = "(Required) The name of the repository."
