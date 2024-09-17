@@ -22,7 +22,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | github\_repository\_collaborators\_collaborators | Map of Users as key and permission as value | `map(string)` | `{}` | no |
-| github\_token | Authentication token used for github. | `string` | n/a | yes |
+| github\_token | Authentication token used for github. | `string` | `""` | no |
 | issue\_label\_labels | (Optional) Set of labels to be created and associated with repo | <pre>list(object({<br>    name        = string<br>    color       = optional(string, "ffffff")<br>    description = optional(string, "")<br>  }))</pre> | `[]` | no |
 | repository\_allow\_auto\_merge | (Optional) Set to true to allow auto-merging pull requests on the repository. | `bool` | `null` | no |
 | repository\_allow\_merge\_commit | (Optional) Set to false to disable merge commits on the repository. | `bool` | `null` | no |

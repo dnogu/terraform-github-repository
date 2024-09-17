@@ -2,6 +2,7 @@
 variable "github_token" {
   type        = string
   description = "Authentication token used for github."
+  default     = ""
 }
 variable "repository_name" {
   type        = string
