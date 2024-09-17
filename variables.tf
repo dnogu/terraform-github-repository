@@ -1,5 +1,5 @@
 # AUTHENTICATION VARIABLES
-variable "github_token" {
+variable "GITHUB_TOKEN" {
   type        = string
   description = "Authentication token used for github."
 }
