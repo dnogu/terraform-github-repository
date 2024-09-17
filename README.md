@@ -28,8 +28,8 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_GITHUB_TOKEN"></a> [GITHUB\_TOKEN](#input\_GITHUB\_TOKEN) | Authentication token used for github. | `string` | n/a | yes |
 | <a name="input_github_repository_collaborators_collaborators"></a> [github\_repository\_collaborators\_collaborators](#input\_github\_repository\_collaborators\_collaborators) | Map of Users as key and permission as value | `map(string)` | `{}` | no |
+| <a name="input_github_token"></a> [github\_token](#input\_github\_token) | Authentication token used for github. | `string` | n/a | yes |
 | <a name="input_issue_label_labels"></a> [issue\_label\_labels](#input\_issue\_label\_labels) | (Optional) Set of labels to be created and associated with repo | <pre>list(object({<br>    name        = string<br>    color       = optional(string, "ffffff")<br>    description = optional(string, "")<br>  }))</pre> | `[]` | no |
 | <a name="input_repository_allow_auto_merge"></a> [repository\_allow\_auto\_merge](#input\_repository\_allow\_auto\_merge) | (Optional) Set to true to allow auto-merging pull requests on the repository. | `bool` | `null` | no |
 | <a name="input_repository_allow_merge_commit"></a> [repository\_allow\_merge\_commit](#input\_repository\_allow\_merge\_commit) | (Optional) Set to false to disable merge commits on the repository. | `bool` | `null` | no |
