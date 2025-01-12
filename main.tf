@@ -65,3 +65,20 @@ resource "github_repository_collaborators" "repo_collaborators" {
     }
   }
 }
+
+
+resource "github_repository_file" "files" {
+  for_each = { for file in local.processed_files : file.file => file }
+
+  repository                      = github_repository.repo.name
+  branch                          = var.github_repository_file_branch
+  file                            = each.value.file
+  content                         = each.value.content
+  commit_message                  = var.github_repository_file_commit_message
+  commit_author                   = var.github_repository_file_commit_author
+  commit_email                    = var.github_repository_file_commit_email
+  overwrite_on_create             = false
+  autocreate_branch               = true
+  autocreate_branch_source_branch = var.github_repository_file_source_branch
+  autocreate_branch_source_sha    = var.github_repository_file_source_sha
+}
