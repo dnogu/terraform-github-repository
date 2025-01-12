@@ -28,6 +28,7 @@ github_repository_file_files_and_content = [
   {
     file          = "test_file_logic"
     content       = "content text"
-    file_location = "files/failifseen.txt"
+    file_location = "files/failifseen.txt" # This entry is for testing module logic. The content argument takes precedence, so file_location should be ignored.
+
   }
 ]
