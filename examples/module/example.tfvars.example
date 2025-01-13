@@ -14,3 +14,21 @@ github_repository_collaborators_collaborators = {
     "pepper" = "push"
     "albus" = "admin"
 }
+
+github_repository_file_files_and_content = [
+  
+  {
+    file          = "test"
+    file_location = "files/test.txt"
+  },
+  {
+    file          = "config.yaml"
+    content       = "Just content"
+  },
+  {
+    file          = "test_file_logic"
+    content       = "content text"
+    file_location = "files/failifseen.txt" # This entry is for testing module logic. The content argument takes precedence, so file_location should be ignored.
+
+  }
+]

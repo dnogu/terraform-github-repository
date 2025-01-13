@@ -208,3 +208,59 @@ variable "github_repository_collaborators_collaborators" {
   description = "Map of Users as key and permission as value"
   default     = {}
 }
+
+variable "github_repository_file_branch" {
+  type        = string
+  description = "Branch to create the file in"
+  default     = "terraform_factory"
+}
+
+variable "github_repository_file_source_branch" {
+  type        = string
+  description = "Branch to copy the file from"
+  default     = "main"
+}
+
+variable "github_repository_file_files_and_content" {
+  type = list(object({
+    file          = string
+    content       = optional(string)
+    file_location = optional(string)
+  }))
+  description = "Files to create"
+  default     = []
+  validation {
+    condition     = alltrue([for f in var.github_repository_file_files_and_content : f.content != null || f.file_location != null])
+    error_message = "Each file must have either 'content' or 'file_location' set."
+  }
+}
+
+variable "github_repository_file_commit_message" {
+  type        = string
+  description = "Commit message to use when creating files"
+  default     = "Managed by OpenTofu"
+}
+
+variable "github_repository_file_commit_author" {
+  type        = string
+  description = "Author to use when creating files"
+  default     = null
+}
+
+variable "github_repository_file_commit_email" {
+  type        = string
+  description = "Email to use when creating files"
+  default     = null
+}
+
+variable "github_repository_file_overwrite_on_create" {
+  type        = bool
+  description = "Overwrite the file if it already exists"
+  default     = false
+}
+
+variable "github_repository_file_source_sha" {
+  type        = string
+  description = "SHA of the source branch"
+  default     = null
+}
